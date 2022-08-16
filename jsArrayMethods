@@ -1,0 +1,75 @@
+Array methods = total 33 
+I will solve the problem with rando method 
+const fruits = ["apple","banana","cherry","orange"];
+to add a first value in array  //unshift()
+since it modifies array 
+fruits.unshift("imUnshift")
+console.log(fruits);
+const fruits = ["apple","banana","cherry","orange"];
+splice method to add and delte in array
+const log = fruits.splice(0,2,"one","two");
+at position 0 add two values and folowed by values
+console.log(fruits);
+
+const fruits = ["orange","apple","cherry","banana"];
+sort()
+it sorts ascendig order
+console.log(fruits.sort());
+
+const fruits = ["orange","apple","cherry","banana"];
+slice() cuts that particular value/values
+starts from 0 and cut slice 2 values
+const fruit = fruits.slice(0,2)
+console.log(fruit);
+
+const fruits = ["orange","apple","cherry","banana"];
+shift() removes the first element in array
+const log = fruits.shift() // it removes "orange"
+console.log(log); //it logs the removes item 
+console.log(fruits);  // it modifies the existing array and returns the value
+
+const fruits = ["orange","apple","cherry","banana"];
+push will insert the values ->>it modifies the array
+it doesnot create new array
+const log = fruits.push("im pushed value")
+console.log(fruits);
+
+const fruits = ["orange","apple","cherry","banana"];
+reverse() will reverse
+fruits.reverse() // modifies the existing array 
+console.log(fruits);
+
+const nums = [1,2,3,4,5]
+reduceRight will reduce the whole array to add or subtract
+it have to have a default value 
+const log = nums.reduceRight((total,num)=>total+num,1)
+console.log(log);
+
+const nums = [1,2,3,4,5]
+const log = nums.reduce((sum,val)=>sum+val,0)
+console.log(log);
+
+ const nums = [1,2,3,4,5]
+map  //map will create a new array in memory and change the value 
+const log = nums.map((num)=>num+1)
+console.log(nums);
+
+const nums = [1,2,3,4,5]
+const log = nums.keys()
+console.log(log.next());
+console.log(log.next());
+
+const nums = [1,2,3,4,5];
+const log = nums.filter((num)=>num>3)
+console.log(log);
+filter()  will get all the values if condition meets
+
+ const nums = [1,2,3,4,5];
+ const log = nums.find((num)=>num>3)
+find()  will get only one single value  if condition meets
+console.log(log);
+
+
+const fruits = ["orange","apple","cherry","banana"];
+fruits.forEach((fruit)=> console.log(fruit+"pineapple") )
+
