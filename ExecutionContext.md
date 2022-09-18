@@ -30,10 +30,10 @@ The Exection context contains the code that's currently running amd everytinh th
 
 During the Execution Context run-time the specific code gets parsed by a parser the variables and functions are stored in memory executable byte-code gets generated and the code gets executed
 There are two kinds of Execution Context in JS
-Global Execution Context(GEC)
+### Global Execution Context(GEC)
 Function Execution Context (FEC)
 
-Global Execution Context(GEC)
+### Global Execution Context(GEC)
 Whenever the JS engine receives a script file it first creates a default Execution Context know as the Global Executuion Context(GEC)
 
 Well, the GEC is the base/default Execution Context where all JS code that is not inside of a function gets executed
@@ -43,7 +43,7 @@ Function Execution Context(FEC)
 Whenever a function is called,the JS engine create a different type of Execution Context known as a Function Execution Context(FEC) within the GEC to evaluate and execute the code within that function 
 Since every function call gets its own FEC there can be more than one FEC in the tun-time of a script
 
-How are Execution Context created
+#### How are Execution Context created
 Now that we are aware of  what execution context are and the fifferent types is availabel,let's look at how they are created
 The creation of an Execution Context(GEC or FEC) happends in two phases
 1)Creation Phase
@@ -57,7 +57,7 @@ during which the properties of the Execution Context Object are defined and set 
 2)Creation of the SCope Chain
 3)Setting the value of the this keyword
 
-Creation of the variable Object(VO)
+## Creation of the variable Object(VO)
 The variable Object (VO) is an object-like-container created within and Execition Context.It stores the variable and function declaration defined within that Execution Context
 In the GEC for each varai le declared with the var keyword a property is added to the VO that pointes to that variable and is set to 'undefined'.
 Also, for every function declaration, a property is added to the VO,pointing to that function and that property is stored in memory.This means that all the function declation will be stored and made accessible inside and made accessible inside the VO, even before the code starts running
@@ -69,7 +69,7 @@ The process of storing variables and function declaratiuon in memory prior to th
 Hoisting in JS 
 Function and variable declarations are hoisted in JS.This means that they are stored in memory of the current Execution Context's VO and made available within the Execution Context even before the execution of the code begins
 
-Function Hoisting.
+## Function Hoisting.
 In most scenarios when building an application,developers can choose to define functions at the top of a script, and only later call them down the code
   
 function myAge(dob){
