@@ -61,7 +61,34 @@ return(
 }
 export default Component
 
+### How do JS closure work
+##### A closure is a pairing of 
+##### 1)A function and 
+##### 2) A reference to that function's outer scope(lexical environment)
 
+A lexical environment is a part of every execution context stack frame and is a map between identifiers (ie. local variable names) amd values
+
+1)Every function in JS maintains a reference to its outer lexical environment
+2)This reference is used to configure the eecution context created when a function is invoked
+3)This reference enables code inside the function to "see" variables declared outside the function, regardless of when and where the function is called.
+4)If a function was called by a function which is turn was called by another function, then a chain of references to outer lexical environments is created This chain is called the scope chain
+In the following code inner forms a closure with the lexical environment of the execution context created when foo is invoked closing over variable secret
+
+function foo() {
+  const secret = Math.trunc(Math.random() * 100)
+  return function inner() {
+    console.log(`The secret number is ${secret}.`)
+  }
+}
+const f = foo() // `secret` is not directly accessible from outside `foo`
+f() // The only way to retrieve `secret`, is to invoke `f`
+(source)(https://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
+
+
+
+
+
+ 
 
 
 
