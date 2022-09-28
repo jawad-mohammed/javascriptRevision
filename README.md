@@ -1,3 +1,4 @@
+(source)(https://dev.to/deen_john/resources-to-master-javascript-3d0p)
 #### Promises
 You can promises to handle Asynchronous operations in modern JS.
 Once you crete a promise in JS it can either succeesd or fail -known as being resolved or rejected in JS terminology
